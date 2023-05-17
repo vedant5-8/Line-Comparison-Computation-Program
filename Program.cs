@@ -23,7 +23,7 @@ namespace LineComparison
 
         }
 
-        static void twoLinesEqualityCheck()
+        static void TwoLinesEqualityCheck()
         {
             int x11, x12, y11, y12;
             int x21, x22, y21, y22;
@@ -63,10 +63,12 @@ namespace LineComparison
             }
 
         }
+
+
         static void Main(string[] args)
         { 
             //Program.lengthOfLine();
-            Program.twoLinesEqualityCheck();
+            Program.TwoLinesEqualityCheck();
         }
     }
 }
