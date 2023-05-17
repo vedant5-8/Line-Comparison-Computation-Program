@@ -4,7 +4,7 @@ namespace LineComparison
 {
     class Program
     {
-        static void lengthOfLine()
+        static void LengthOfLine()
         {
             int x1, x2, y1, y2;
             double length;
@@ -67,7 +67,7 @@ namespace LineComparison
 
         static void Main(string[] args)
         { 
-            //Program.lengthOfLine();
+            //Program.LengthOfLine();
             Program.TwoLinesEqualityCheck();
         }
     }
