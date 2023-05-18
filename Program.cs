@@ -94,26 +94,45 @@ namespace LineComparison
             lengthOfLineOne = Math.Sqrt(Math.Pow((x12 - x11), 2) + Math.Pow((y12 - y11), 2));
             lengthOfLineTwo = Math.Sqrt(Math.Pow((x22 - x21), 2) + Math.Pow((y22 - y21), 2));
 
-            if (lengthOfLineOne > lengthOfLineTwo)
+            int result = lengthOfLineOne.CompareTo(lengthOfLineTwo);
+
+            switch (result)
             {
-                Console.WriteLine("Lines 1 is greater than Line 2");
-            }
-            else if (lengthOfLineOne < lengthOfLineTwo) 
-            {
-                Console.WriteLine("Lines 1 is smaller than Line 2");
-            }
-            else
-            {
-                Console.WriteLine("Both lines are equal.");
+                case -1:
+                    Console.WriteLine("Line 1 is less than Line 2");
+                    break;
+                case 0:
+                    Console.WriteLine("Line 1 is equal to Line 2");
+                    break;
+                case 1:
+                    Console.WriteLine("Line 1 is greater than Line 2");
+                    break;
             }
         }
         static void Main(string[] args)
-        {
-            //Program.LengthOfLine();
+        { 
+            Console.WriteLine("choose a number: ");
+            Console.WriteLine("1. To find length of line.");
+            Console.WriteLine("2. To check line 1 is equal or unequal to line 2.");
+            Console.WriteLine("3. To check line 1 is greater, smaller and equal to line 2.");
+            Console.Write("=>");
+            int choice = Convert.ToInt32(Console.ReadLine());
 
-            //Program.TwoLinesEqualityCheck();
-
-            Program.CompareTwoLines();
+            switch (choice)
+            {
+                case 1:
+                    Program.LengthOfLine();
+                    break;
+                case 2:
+                    Program.TwoLinesEqualityCheck();
+                    break;
+                case 3:
+                    Program.CompareTwoLines();
+                    break;
+                default:
+                    Console.WriteLine("Enter correct choice.");
+                    break;
+            }
 
         }
     }
